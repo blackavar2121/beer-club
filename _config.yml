@@ -21,8 +21,8 @@
 title: Beer Club
 email: your-email@example.com
 description: Craft beer reviews and tasting notes
-baseurl: "/beer-club"  # for GitHub project pages
-url: "https://blackavar2121.github.io"
+baseurl: ""
+url: "https://itsbeer.club"
 
 # Minimal Mistakes settings
 minimal_mistakes_skin: "dark"  # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
