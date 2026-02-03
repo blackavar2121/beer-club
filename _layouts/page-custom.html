@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/splash.css' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    .page-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 8rem 2rem 4rem;
+    }
+    .page-content h1 {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      color: var(--color-gold);
+      margin-bottom: 2rem;
+    }
+    .page-content h2 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: var(--color-accent);
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .page-content p {
+      color: var(--color-text-muted);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .page-content a {
+      color: var(--color-accent);
+    }
+  </style>
+</head>
+<body>
+  <nav class="top-nav">
+    <a href="{{ '/' | relative_url }}" class="nav-logo">Beer Club</a>
+    <div class="nav-links">
+      <a href="{{ '/blog' | relative_url }}">Blog</a>
+      <a href="{{ '/about' | relative_url }}">About</a>
+    </div>
+  </nav>
+
+  <main class="page-content">
+    <h1>{{ page.title }}</h1>
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <p>{{ site.title }} &middot; Making time for what matters since whenever you started</p>
+  </footer>
+</body>
+</html>
