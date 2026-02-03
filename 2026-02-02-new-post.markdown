@@ -1,0 +1,27 @@
+---
+layout: post
+title:  "New Post"
+date:   2026-02-02 21:17:32 -0500
+categories: blog
+---
+
+Write your post content here.
+
+## Section Heading
+
+You can use markdown syntax for formatting:
+
+- Bullet points
+- **Bold text**
+- *Italic text*
+- [Links](https://example.com)
+
+### Code Examples
+
+```ruby
+def example
+  puts "Hello, World!"
+end
+```
+
+Add your images, content, and formatting as needed.

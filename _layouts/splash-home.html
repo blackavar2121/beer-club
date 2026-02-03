@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/splash.css' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="top-nav">
+    <a href="{{ '/' | relative_url }}" class="nav-logo">Beer Club</a>
+    <div class="nav-links">
+      <a href="{{ '/blog' | relative_url }}">Blog</a>
+      <a href="{{ '/about' | relative_url }}">About</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-image">
+      <img src="{{ '/assets/images/hero_image_1.png' | relative_url }}" alt="Beer Club - a tiny astronaut contemplates a giant beer">
+    </div>
+    <div class="hero-content">
+      <h1>{{ page.hero_headline | default: "An Excuse to See Your Friends" }}</h1>
+      <p class="hero-tagline">{{ page.hero_tagline | default: "Life gets busy. Beer Club is our way of making sure it doesn't win." }}</p>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="what">
+    <div class="section-content">
+      <h2>{{ page.section1_title | default: "What is Beer Club?" }}</h2>
+      <p>{{ page.section1_text | default: "It's not really about beer. It's about carving out time to actually see your friends instead of just texting 'we should hang out soon' for the 47th time." }}</p>
+    </div>
+  </section>
+
+  <section class="section" id="rules">
+    <div class="section-content">
+      <h2>{{ page.section2_title | default: "The Rules" }}</h2>
+      <div class="rules-list">
+        <div class="rule">
+          <span class="rule-number">1</span>
+          <p>{{ page.rule1 | default: "Pick a regular time. Monthly works. Weekly if you're lucky." }}</p>
+        </div>
+        <div class="rule">
+          <span class="rule-number">2</span>
+          <p>{{ page.rule2 | default: "Show up. That's it. That's the rule." }}</p>
+        </div>
+        <div class="rule">
+          <span class="rule-number">3</span>
+          <p>{{ page.rule3 | default: "Beer is optional. Friendship is mandatory." }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="why">
+    <div class="section-content">
+      <h2>{{ page.section3_title | default: "Why It Works" }}</h2>
+      <p>{{ page.section3_text | default: "Because if it's not on the calendar, it doesn't happen. We all know this. Beer Club just gives you permission to prioritize hanging out with your people." }}</p>
+    </div>
+  </section>
+
+  <section class="section" id="start">
+    <div class="section-content">
+      <h2>{{ page.section4_title | default: "Start Your Own" }}</h2>
+      <p>{{ page.section4_text | default: "Text your friends. Pick a day. Pick a place. Repeat forever. You don't need our permission, but here it is anyway." }}</p>
+      {% if page.cta_text %}
+      <a href="{{ page.cta_link | default: '/blog' | relative_url }}" class="cta-button">{{ page.cta_text }}</a>
+      {% endif %}
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>{{ site.title }} &middot; Making time for what matters since whenever you started</p>
+  </footer>
+</body>
+</html>
